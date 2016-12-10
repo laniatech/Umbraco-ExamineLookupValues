@@ -16,6 +16,14 @@ Like this (based on the example above):
 <rule docTypeAlias="BlogPost" propertyAlias="categoryPicker"/>
 ```
 
+You can also set rules programmatically on application start, like this:
+```
+public void OnApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
+{
+  DotSee.ExamineLookupValues.Elv.Instance.RegisterRule(new DotSee.ExamineLookupValues.ElvRule("BlogPost", "categoryPicker"));
+}
+```
+
 Two things to note:
 - If you change the name of a lookup node, the index values will not be updated for pickers that reference it. In this case, only a full index rebuild will update those nodes.
 - Since this is doing a lookup for every node included in the picker, it may slow down your publishing and index rebuild process a bit if you have a large number of nodes and also many nodes selected in pickers. In my experience, this will start to show after you have a significant amount of nodes (10k or more).
