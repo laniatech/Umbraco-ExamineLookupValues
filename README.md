@@ -15,6 +15,6 @@ The property alias to check
 
 Like this (based on the example above):
 ```
-  <rule docTypeAlias="BlogPost" propertyAlias="categoryPicker"/>
+<rule docTypeAlias="BlogPost" propertyAlias="categoryPicker"/>
 ```
 
