@@ -14,7 +14,7 @@ The document type alias to watch for
 The property alias to check
 
 Like this (based on the example above):
-'''
+```
   <rule docTypeAlias="BlogPost" propertyAlias="categoryPicker"/>
-'''
+```
 
