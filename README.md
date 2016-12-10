@@ -24,6 +24,15 @@ public void OnApplicationStarted(UmbracoApplicationBase umbracoApplication, Appl
 }
 ```
 
+You can set the Examine indexer to use like this in the configuration file:
+```
+<?xml version="1.0" encoding="utf-8"?>
+
+<elv indexer="ExternalIndexer">
+```
+Where you can substitute "ExternalIndexer" with your indexer.
+
+
 Two things to note:
 - If you change the name of a lookup node, the index values will not be updated for pickers that reference it. In this case, only a full index rebuild will update those nodes.
 - Since this is doing a lookup for every node included in the picker, it may slow down your publishing and index rebuild process a bit if you have a large number of nodes and also many nodes selected in pickers. In my experience, this will start to show after you have a significant amount of nodes (10k or more).
