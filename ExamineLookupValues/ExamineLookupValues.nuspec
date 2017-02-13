@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Sotiris Filippidis</authors>
+    <owners>Sotiris Filippidis</owners>
+    <projectUrl>https://github.com/sotirisf/Umbraco-ExamineLookupValues.git</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Includes names of nodes selected via Multi-Node Treepickers (MNTP) into Examine indexes instead of the node IDs to facilitate Examine searches.</description>
+    <copyright>Copyright 2016</copyright>
+    <tags>umbraco examine lookup mntp picker</tags>
+    <references>
+      <reference file="DotSee.ExamineLookupValues.dll" />
+    </references>
+    <dependencies>
+      <dependency id="UmbracoCms.Core" version="7.4.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\SampleConfig\DotSee.Elv.config" target="content\Config" />
+  </files>
+</package>
